@@ -1,10 +1,10 @@
-name: Trabalho Veco
+name: Esteira
 
 on: pull_request
 
 jobs:
   display_messages:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: checar o codigo
@@ -22,5 +22,4 @@ jobs:
       - name: Exibir mensagem 4
         run: echo "Automação finalizada"
 
-        #Antônio, Cláudia e Guilherme A.K.A. REI DO INFERNO
-        #
+
