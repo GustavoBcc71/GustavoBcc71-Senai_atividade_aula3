@@ -1,25 +1,26 @@
-name: Esteira
+# pipeline.yml
+# Dupla: Gustavo e Breno
 
-on: pull_request
+name: CI para Pull Request
+
+on:
+  pull_request:
 
 jobs:
+  build:
   display_messages:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
-      - name: checar o codigo
-        uses: actions/checkout@v3
-      
-      - name: Exibir mensagem 1
-        run: echo "Automação inicada"
+    - name: Checando o repositório
+      uses: actions/checkout@v3
 
-      - name: Exibir mensagem 2
-        run: echo "Automação em andamento"
+    - name: Mensagem 1
+      run: echo "Começando o CI para PR!"
 
-      - name: Exibir mensagem 3
-        run: echo "Aguarde"
+    - name: Mensagem 2
+      run: echo "Código recebido. Executando validações..."
 
-      - name: Exibir mensagem 4
-        run: echo "Automação finalizada"
-
+    - name: Mensagem 3
+      run: echo "Processo concluído com sucesso!"
 
